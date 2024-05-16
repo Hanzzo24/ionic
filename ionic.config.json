@@ -1,0 +1,7 @@
+{
+  "name": "listarTiendas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

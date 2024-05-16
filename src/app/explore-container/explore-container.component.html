@@ -1,0 +1,30 @@
+  <ion-content fullscreen="true" color="dark">
+    <strong>{{ name }}</strong>
+    <h1>Listar Tiendas</h1>   
+    
+    <ion-list lines="full" inset="true" color="dark"> 
+      <!-- Agregamos lines="full" para mostrar líneas completas en los ítems -->
+      @for (user of users; track user.NOMBRE) {
+        <ion-item-sliding  >
+          <ion-item button detail>
+
+            <ion-thumbnail slot="start">
+              <img alt="Foto de la TIENDA" src="https://www.bikezona.com/logos/{{ user.LOGO }}" />
+            </ion-thumbnail>
+
+            <ion-label><h2><strong>{{user.NOMBRE}}</strong></h2> {{user.POBLACION}}</ion-label>
+
+          </ion-item>
+
+            <ion-item-options >
+              <ion-item-option  expandable color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>          
+        </ion-item-sliding>    }
+    </ion-list>  
+  </ion-content>
+
+
+  
+      
